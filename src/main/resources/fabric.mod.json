@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "dupeplayerjoin",
+  "version": "${version}",
+
+  "name": "Duplicate Player Join",
+  "description": "This mod allows duplicate player joins",
+  "authors": [
+    "oxygencraft"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.oxygencraft.dupejoin.DupeJoinMod"
+    ]
+  },
+  "mixins": [
+    "dupeplayerjoin.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.4.0"
+  }
+}

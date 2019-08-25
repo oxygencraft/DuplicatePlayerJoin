@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "me.oxygencraft.dupejoin.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ServerLoginNetworkHandlerMixin"
+  ],
+  "client": [
+    "IntegratedPlayerManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            name = "Fabric"
+            url = "https://maven.fabricmc.net/"
+        }
+        maven {
+            name = "Forge"
+            url = "https://files.minecraftforge.net/maven/"
+        }
+        maven {
+            name = "Jitpack"
+            url 'https://jitpack.io/'
+        }
+    }
+    dependencies {
+        classpath 'com.github.Chocohead:fabric-loom:51f7373'
+    }
+}
+
+apply plugin: "fabric-loom"
+import net.fabricmc.loom.task.RemappingJar;
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+archivesBaseName = "dupe-player-join"
+version = "1.0.0"
+
+minecraft {
+    AT = file("src/main/resources/access-transformations.txt")
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.14.4"
+    mappings "net.fabricmc:yarn:1.14.4+build.9:tiny@gz"
+    modCompile "net.fabricmc:fabric-loader:0.4.8+build.159"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+
+jar {
+    AT.include = false
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = "sources"
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives(sourcesJar) {
+        builtBy sourcesJar
+    }
+}
