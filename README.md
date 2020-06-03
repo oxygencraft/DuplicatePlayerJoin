@@ -15,7 +15,7 @@ not sure if it is actually possible or not but if it is and it does work, I will
 
 This is a bit of a useless mod for most players but it can be a useful tool for developers for testing who only have one MC 
 account (like me) and doesn't want to buy a new MC account or mess with the launcher to get offline accounts. I have made a Spigot
-version of this mod which I use to test the plugin I am currently working on so it is useful for some people. I won't be sharing
+version of this mod which I use to test the plugin I am currently working on so this mod useful for some people. I won't be sharing
 the Spigot version of this mod because I had to make a patch which gets tedious to update it with every single new build of Spigot.
 
 This was originally built for 1.14.4 but I tested it on the 1.15.2 (the latest version at the time I tested it though it still
