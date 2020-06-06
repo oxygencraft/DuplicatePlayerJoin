@@ -1,0 +1,5 @@
+main: me.oxygencraft.dupeplayerjoin.DupePlayerJoin
+name: DuplicatePlayerJoin
+version: 1.0.0
+author: oxygencraft
+api-version: 1.15
